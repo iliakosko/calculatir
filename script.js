@@ -132,6 +132,21 @@ class SumbCommand extends SimplCommand{
     }
 }
 
+class PersCommand extends SimplCommand{
+
+    execute(){
+        
+        this.value = this.value/100
+        return this.value
+    
+    }
+
+    undo(){
+        this.value =  this.value * 100
+        return this.value
+    }
+}
+
 
 
 
@@ -176,7 +191,17 @@ class Calculator{
                 break
             case 'ten':
                 simCommand= new TenCommand(this.currentOperand)
-                
+                break
+            case 'fac':
+                simCommand= new FactCommand(this.currentOperand)
+                break
+            case 'neg':
+                console.log("asd")
+                simCommand= new SumbCommand(this.currentOperand)
+                break
+            case 'pers':
+                console.log("asd")
+                simCommand= new PersCommand(this.currentOperand)
                 break
             default:
                 return
@@ -250,7 +275,7 @@ const numberButtons = document.querySelectorAll('[data-number]')
 const operationButtons = document.querySelectorAll('[data-operation]')
 const equalsButton = document.querySelector('[data-equals]')
 const allClearButton = document.querySelector('[data-all-clear]')
-const tenButton = document.querySelector('[data-ten]')
+const tenButton = document.querySelectorAll('[data-ten]')
 const simDegButton = document.querySelectorAll('[data-deg]')
 const previousOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
@@ -276,9 +301,11 @@ operationButtons.forEach(button => {button.addEventListener('click', () => {
     })
 })
 
-tenButton.addEventListener('click', button => {
-    calculator.computeWithout(tenButton.dataset.myatt)
+tenButton.forEach(button => {button.addEventListener('click', () => {
+    console.log(button.dataset.ten)
+    calculator.computeWithout(button.dataset.ten)
     calculator.updateDisplay()
+    })
 })
 
 equalsButton.addEventListener('click', button => {
