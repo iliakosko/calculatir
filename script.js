@@ -48,8 +48,12 @@ class MultCommand extends SimplCommand{
 class DivCommand extends SimplCommand{
 
     execute(currentValue){
-        this.value = this.value / currentValue 
-        return this.value
+        if(currentValue === 0){
+            return 0;
+        }else{
+            this.value = this.value / currentValue 
+            return this.value
+        }
     }
 
     undo(currentValue){
@@ -62,12 +66,12 @@ class DivCommand extends SimplCommand{
 class SqrtCommand extends SimplCommand{
 
     execute(degree){
-        this.value = this.value**(degree)
+        this.value = this.value** (1/degree)
         return this.value
     }
 
     undo(degree){
-        this.value = this.value**(1/degree)
+        this.value = this.value**(degree)
         return this.value
     }
 }
@@ -148,6 +152,51 @@ class PersCommand extends SimplCommand{
 }
 
 
+class XDegreeCommand extends SimplCommand{
+
+    execute(currentValue){
+        var startVal = this.value
+        for(var i = 0; i<currentValue-1; i++){
+            this.value = this.value* startVal
+        }
+        return this.value
+    
+    }
+
+    undo(currentValue){
+        var startVal = this.value
+        for(var i = 0; i<currentValue-1; i++){
+            this.value = this.value/ startVal
+        }
+        return this.value
+    }
+}
+
+class XYDegreeCommand extends SimplCommand{
+
+    execute(currentValue){
+        if(currentValue !== 0){
+            console.log("asdfadf")
+        this.value = this.value** (1/currentValue)
+        } else{
+            return 0
+        }
+        return this.value
+    
+    }
+
+    undo(currentValue){
+        if(currentValue !== 0){
+            this.value = this.value** currentValue
+            } else{
+                return 0
+            }
+            return this.value
+    }
+}
+
+
+
 
 
 class Calculator{
@@ -170,6 +219,10 @@ class Calculator{
 
     chooseOperation(operation){
         if(this.currentOperand === '') return
+        console.log(operation)
+        if(operation.toLocaleLowerCase() === 'X y'.toLocaleLowerCase()){
+            operation = 'x^y'
+        }
         if(this.previousOperand !== '') {
             this.compute()
         }
@@ -218,6 +271,7 @@ class Calculator{
         const prev = parseFloat(this.previousOperand)
         const current = parseFloat(this.currentOperand)
         if (isNaN(prev) || isNaN(current)) return
+        console.log(this.operation)
         switch (this.operation) {
         case '+':
             simCommand = new AddCommand(prev)
@@ -230,6 +284,12 @@ class Calculator{
             break
         case '/':
             simCommand= new DivCommand(prev)
+            break
+        case 'x^y':
+            simCommand= new XDegreeCommand(prev)
+            break
+        case 'y√x':
+            simCommand= new XYDegreeCommand(prev)
             break
         default:
             return
