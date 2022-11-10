@@ -17,15 +17,67 @@ body{
     align-content: center;
     min-height: 100vh;
     grid-template-columns: repeat(8, 100px);
-    grid-template-rows: minmax(120px, auto) repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
 }
 
-.calculator-grid > button{
+.memory-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: 100px;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+}
+
+.pow-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: 100px;
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+}
+
+.sqrt-buttons {
+    display: flex;
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+    width: 400px
+}
+
+.empty-block {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(4, 100px);
+    grid-row: 5 / 7;
+    grid-column: 1 / 5;
+}
+.numbers-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(4, 100px);
+    grid-row: 3 / 5;
+    grid-column: 5 / 8;
+}
+.simple-math-operations.row {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: 100px;
+    grid-column: 5 / 8;
+    grid-row: 2 / 3;
+}
+
+.simple-math-operations.column {
+    grid-column: 8 / 9;
+    grid-row: 2 / 3;
+}
+
+button{
     cursor: pointer;
     font-size: 2rem;
     border: 1px solid white;
     outline: none;
     background-color: rgba(255, 255, 255, .75);
+    width: 100px;
+    height: 100px;
 }
 
 .calculator-grid > button:hover{
@@ -38,10 +90,12 @@ body{
 
 .span-two {
     grid-column: span 2;
+    width: 200px;
 }
 
 .output{
     grid-column: 1 / -1;
+    grid-row: 1 / 2;
     background-color: rgb(0, 0, 0, .75);
     display: flex;
     align-items: flex-end;

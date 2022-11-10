@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link href="../styles.css" rel="stylesheet">
+  </head>
+  <body>
+          <div class="calculator-grid">
+            <div class="output">
+              <div data-previous-operand class="previous-operand"></div>
+              <div data-current-operand class="current-operand"></div>
+            </div>
+            <div class="numbers-container" id="numbers-container">
+              <button data-number>7</button>
+              <button data-number>8</button>
+              <button data-number>9</button>
+              <button data-number>4</button>
+              <button data-number>5</button>
+              <button data-number>6</button>
+              <button data-number>1</button>
+              <button data-number>2</button>
+              <button data-number>3</button>
+              <button data-number class="span-two">0</button>
+              <button data-number>.</button>
+            </div>
+            <div class="simple-math-operations row">
+              <button data-all-clear>AC</button>
+              <button id="neg" value="neg">+/-</button>
+              <button id="pers" value="pers">%</button>
+            </div>
+            <div class="simple-math-operations column" id="simple-math-operations">
+              <button data-operation>/</button>
+              <button data-operation>*</button>
+              <button data-operation>-</button>
+              <button data-operation>+</button>
+              <button data-equals>=</button>
+            </div>
+            <div class="memory-buttons">
+              <button >MC</button>
+              <button >M+</button>
+              <button >M-</button>
+              <button >MR</button>
+            </div>
+            <div class="pow-buttons" id="pow-buttons">
+              <button value="ten">10 <sup><small>x</small></sup> </button>
+              <button id="xpowy" data-operation>X <sup><small>y</small></sup></button>
+              <div style="width: 200px; display: flex" id="deg">
+                <button value="3">X <sup><small>3</small></sup></button>
+                <button value="2">X <sup><small>2</small></sup></button>
+              </div>
+            </div>
+            <div class="sqrt-buttons" id="sqrt-buttons">
+              <button value="one" >1/x</button>
+              <button id="ysqrtx"><sup>y</sup>√<span class = "overline">x</span> </button>
+              <div style="width: 200px; display: flex" id="sqrtdeg">
+                <button value="0.333333333333333333"><sup>3</sup>√<span class = "overline">x</span> </button>
+                <button value="0.5"><sup>2</sup>√<span class = "overline">x</span> </button>
+              </div>
+            </div>
+            <div class="empty-block">
+              <button id="fac" value="fac">x! </button>
+              <button disabled>EMPT. </button>
+              <button disabled>EMPT. </button>
+              <button disabled>EMPT. </button>
+              <button disabled>EMPT. </button>
+              <button disabled>EMPT. </button>
+              <button disabled>EMPT. </button>
+              <button disabled>EMPT. </button>
+            </div>
+        </div>
+  </body>
+</html>
