@@ -33,8 +33,7 @@ class Calculator{
     }
 
     chooseOperation(operation){
-        if(this.currentOperand === '') return
-        console.log(operation)
+        if(this.currentOperand === '' || operation == '=') return
         if(operation.toLocaleLowerCase() === 'X y'.toLocaleLowerCase()){
             operation = 'x^y'
         }
@@ -64,11 +63,11 @@ class Calculator{
                 simCommand= new FactCommand(this.currentOperand)
                 break
             case 'neg':
-                console.log("asd")
+            
                 simCommand= new SumbCommand(this.currentOperand)
                 break
             case 'pers':
-                console.log("asd")
+                
                 simCommand= new PersCommand(this.currentOperand)
                 break
             default:
@@ -86,7 +85,6 @@ class Calculator{
         const prev = parseFloat(this.previousOperand)
         const current = parseFloat(this.currentOperand)
         if (isNaN(prev) || isNaN(current)) return
-        console.log(this.operation)
         switch (this.operation) {
             case '+':
                 simCommand = new AddCommand(prev)
