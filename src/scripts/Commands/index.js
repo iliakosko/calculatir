@@ -11,8 +11,16 @@ import {SumbCommand} from "./SumbCommand";
 import {TenCommand} from "./TenCommand";
 import {XDegreeCommand} from "./XDegreeCommand";
 import {XYDegreeCommand} from "./XYDegreeCommand";
+import {AddMemory} from "./AddMemory";
+import {SubMemory} from "./SubMemory";
+import {ClearMemory} from "./ClearMemory";
+import {ReadMemory} from "./ReadMemory";
 
 export {
+    AddMemory,
+    SubMemory,
+    ClearMemory,
+    ReadMemory,
     AddCommand,
     DivCommand,
     FactCommand,

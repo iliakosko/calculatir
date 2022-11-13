@@ -10,6 +10,10 @@ import {FactCommand} from "./Commands/FactCommand";
 import {SumbCommand} from "./Commands/SumbCommand";
 import {PersCommand} from "./Commands/PersCommand";
 import {XYDegreeCommand} from "./Commands/XYDegreeCommand";
+import { AddMemory } from "./Commands/AddMemory";
+import { ClearMemory } from "./Commands/ClearMemory";
+import { SubMemory } from "./Commands/SubMemory";
+import { ReadMemory } from "./Commands/ReadMemory";
 
 const previousOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
@@ -44,6 +48,30 @@ class Calculator{
         this.previousOperand = this.currentOperand
         this.currentOperand = ''
     }
+
+    addMemory(){
+        let mAdd = new AddMemory()
+        mAdd.execute(this.currentOperandTextElement.innerText)
+    }
+
+    clearMemory(){
+        let c = new ClearMemory()
+        c.execute()
+    }
+
+    subMemory(){
+        let mSub = new SubMemory()
+        mSub.execute(this.currentOperandTextElement.innerText)
+    }
+
+    readMemory(){
+        let r = new ReadMemory()
+        this.currentOperand = r.execute()
+        this.updateDisplay()
+    }
+
+
+
 
     computeDeg(degree){
         let a = new SqrtCommand(this.currentOperand)
