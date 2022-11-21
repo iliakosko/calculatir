@@ -11,7 +11,7 @@ export class FactCommand extends SimplCommand {
       this.value = 0;
       alert('Отрицатеьное число');
     }
-    if (this.value === 0 || this.value === 1) { return 1; }
+    if (this.value === 0 || this.value === 1) { this.value = 1; }
     for (let i = this.value - 1; i >= 1; i--) {
       this.value *= i;
     }
