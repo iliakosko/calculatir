@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 import { calculator } from '../Calculator';
 
-const equalsButton = document.querySelector('[data-equals]');
+const equalsButton = document.getElementById('data-equals');
 
 equalsButton.addEventListener('click', (button) => {
   calculator.compute();

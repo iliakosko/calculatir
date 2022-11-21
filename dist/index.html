@@ -8,21 +8,21 @@
   <body>
           <div class="calculator-grid">
             <div class="output">
-              <div data-previous-operand class="previous-operand"></div>
-              <div data-current-operand class="current-operand"></div>
+              <div id="data-previous-operand" class="previous-operand"></div>
+              <div id="data-current-operand" class="current-operand"></div>
             </div>
             <div class="numbers-container" id="numbers-container">
-              <button data-number>7</button>
-              <button data-number>8</button>
-              <button data-number>9</button>
-              <button data-number>4</button>
-              <button data-number>5</button>
-              <button data-number>6</button>
-              <button data-number>1</button>
-              <button data-number>2</button>
-              <button data-number>3</button>
-              <button data-number class="span-two">0</button>
-              <button data-number>.</button>
+              <button >7</button>
+              <button >8</button>
+              <button >9</button>
+              <button >4</button>
+              <button >5</button>
+              <button >6</button>
+              <button >1</button>
+              <button >2</button>
+              <button >3</button>
+              <button  class="span-two">0</button>
+              <button >.</button>
             </div>
             <div class="simple-math-operations row">
               <button data-all-clear>AC</button>
@@ -30,11 +30,11 @@
               <button id="pers" value="pers">%</button>
             </div>
             <div class="simple-math-operations column" id="simple-math-operations">
-              <button data-operation>/</button>
-              <button data-operation>*</button>
-              <button data-operation>-</button>
-              <button data-operation>+</button>
-              <button data-equals>=</button>
+              <button >/</button>
+              <button >*</button>
+              <button >-</button>
+              <button >+</button>
+              <button id="data-equals">=</button>
             </div>
             <div class="memory-buttons" >
               <button id="memory-clear" >MC</button>
@@ -44,7 +44,7 @@
             </div>
             <div class="pow-buttons" id="pow-buttons">
               <button value="ten">10 <sup><small>x</small></sup> </button>
-              <button id="xpowy" data-operation>X <sup><small>y</small></sup></button>
+              <button id="xpowy" >X <sup><small>y</small></sup></button>
               <div style="width: 200px; display: flex" id="deg">
                 <button value="3">X <sup><small>3</small></sup></button>
                 <button value="2">X <sup><small>2</small></sup></button>
