@@ -1,14 +1,14 @@
-import {SimplCommand} from "./SimplCommand";
+/* eslint-disable import/prefer-default-export */
+import { SimplCommand } from './SimplCommand';
 
-export class SqrtCommand extends SimplCommand{
+export class SqrtCommand extends SimplCommand {
+  execute(degree) {
+    this.value **= degree;
+    return this.value;
+  }
 
-    execute(degree){
-        this.value = this.value** degree
-        return this.value
-    }
-
-    undo(degree){
-        this.value = this.value**(1/degree)
-        return this.value
-    }
+  undo(degree) {
+    this.value **= (1 / degree);
+    return this.value;
+  }
 }

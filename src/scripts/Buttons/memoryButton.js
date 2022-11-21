@@ -1,22 +1,23 @@
-import {calculator} from "../Calculator";
+/* eslint-disable no-undef */
+import { calculator } from '../Calculator';
 
-const memoryClearButtons = document.getElementById('memory-clear')
-const memoryAddButton = document.getElementById('memory-add')
-const memorySubButton = document.getElementById('memory-sub')
-const memoryReadButton = document.getElementById('memory-read')
+const memoryClearButtons = document.getElementById('memory-clear');
+const memoryAddButton = document.getElementById('memory-add');
+const memorySubButton = document.getElementById('memory-sub');
+const memoryReadButton = document.getElementById('memory-read');
 
 memoryAddButton.addEventListener('click', () => {
-    calculator.addMemory()
-})
+  calculator.addMemory();
+});
 
 memoryClearButtons.addEventListener('click', () => {
-    calculator.clearMemory()
-})
+  calculator.clearMemory();
+});
 
 memorySubButton.addEventListener('click', () => {
-    calculator.subMemory()
-})
+  calculator.subMemory();
+});
 
 memoryReadButton.addEventListener('click', () => {
-    calculator.readMemory()
-})
+  calculator.readMemory();
+});

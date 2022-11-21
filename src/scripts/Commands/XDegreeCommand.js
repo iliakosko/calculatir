@@ -1,21 +1,21 @@
-import {SimplCommand} from "./SimplCommand";
+/* eslint-disable no-plusplus */
+/* eslint-disable import/prefer-default-export */
+import { SimplCommand } from './SimplCommand';
 
-export class XDegreeCommand extends SimplCommand{
-
-    execute(currentValue){
-        var startVal = this.value
-        for(var i = 0; i<currentValue-1; i++){
-            this.value = this.value* startVal
-        }
-        return this.value
-
+export class XDegreeCommand extends SimplCommand {
+  execute(currentValue) {
+    const startVal = this.value;
+    for (let i = 0; i < currentValue - 1; i++) {
+      this.value *= startVal;
     }
+    return this.value;
+  }
 
-    undo(currentValue){
-        var startVal = this.value
-        for(var i = 0; i<currentValue-1; i++){
-            this.value = this.value/ startVal
-        }
-        return this.value
+  undo(currentValue) {
+    const startVal = this.value;
+    for (let i = 0; i < currentValue - 1; i++) {
+      this.value /= startVal;
     }
+    return this.value;
+  }
 }

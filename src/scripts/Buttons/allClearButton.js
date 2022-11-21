@@ -1,8 +1,9 @@
-import {calculator} from "../Calculator";
+/* eslint-disable no-undef */
+import { calculator } from '../Calculator';
 
-const allClearButton = document.querySelector('[data-all-clear]')
+const allClearButton = document.querySelector('[data-all-clear]');
 
 allClearButton.addEventListener('click', () => {
-    calculator.clear()
-    calculator.updateDisplay()
-})
+  calculator.clear();
+  calculator.updateDisplay();
+});

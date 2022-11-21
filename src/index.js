@@ -1,3 +1,3 @@
-import './scripts/Commands'
+import './scripts/Commands';
 
-import './scripts/Buttons'
+import './scripts/Buttons';

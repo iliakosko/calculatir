@@ -1,14 +1,15 @@
-import {calculator} from "../Calculator";
+/* eslint-disable no-undef */
+import { calculator } from '../Calculator';
 
-const simDegButton = document.getElementById('deg')
-const sqrtButton = document.getElementById('sqrtdeg')
+const simDegButton = document.getElementById('deg');
+const sqrtButton = document.getElementById('sqrtdeg');
 
 simDegButton.addEventListener('click', (event) => {
-    calculator.computeDeg(event.target.value)
-    calculator.updateDisplay()
-})
+  calculator.computeDeg(event.target.value);
+  calculator.updateDisplay();
+});
 
 sqrtButton.addEventListener('click', (event) => {
-    calculator.computeDeg(event.target.value)
-    calculator.updateDisplay()
-})
+  calculator.computeDeg(event.target.value);
+  calculator.updateDisplay();
+});

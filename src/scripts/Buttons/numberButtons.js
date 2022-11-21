@@ -1,8 +1,9 @@
-import {calculator} from "../Calculator";
+/* eslint-disable no-undef */
+import { calculator } from '../Calculator';
 
-const numberButtons = document.getElementById('numbers-container')
+const numberButtons = document.getElementById('numbers-container');
 
 numberButtons.addEventListener('click', (event) => {
-    calculator.appendNumber(event.target.innerText)
-    calculator.updateDisplay()
-})
+  calculator.appendNumber(event.target.innerText);
+  calculator.updateDisplay();
+});

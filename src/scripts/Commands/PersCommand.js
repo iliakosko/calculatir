@@ -1,16 +1,14 @@
-import {SimplCommand} from "./SimplCommand";
+/* eslint-disable import/prefer-default-export */
+import { SimplCommand } from './SimplCommand';
 
-export class PersCommand extends SimplCommand{
+export class PersCommand extends SimplCommand {
+  execute() {
+    this.value /= 100;
+    return this.value;
+  }
 
-    execute(){
-
-        this.value = this.value/100
-        return this.value
-
-    }
-
-    undo(){
-        this.value =  this.value * 100
-        return this.value
-    }
+  undo() {
+    this.value *= 100;
+    return this.value;
+  }
 }

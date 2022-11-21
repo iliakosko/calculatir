@@ -1,7 +1,7 @@
-import './allClearButton'
-import './tenButton'
-import './simDegButton'
-import './equalsButton'
-import './numberButtons'
-import './operationsButton'
-import './memoryButton'
+import './allClearButton';
+import './tenButton';
+import './simDegButton';
+import './equalsButton';
+import './numberButtons';
+import './operationsButton';
+import './memoryButton';

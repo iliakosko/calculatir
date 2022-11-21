@@ -1,16 +1,16 @@
+/* eslint-disable class-methods-use-this */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-undef */
+/* eslint-disable import/prefer-default-export */
 export class AddMemory {
-
-    execute(currentValue){
-        let cV = parseFloat(currentValue.replace(',', ''))
-        let memoryVal = parseFloat(localStorage.getItem('val'))
-        if(isNaN(memoryVal)){
-            localStorage.setItem('val', cV)
-        }
-        else{
-            let rez = memoryVal + cV
-            localStorage.setItem('val', rez)
-        }        
+  execute(currentValue) {
+    const cV = parseFloat(currentValue.replace(',', ''));
+    const memoryVal = parseFloat(localStorage.getItem('val'));
+    if (isNaN(memoryVal)) {
+      localStorage.setItem('val', cV);
+    } else {
+      const rez = memoryVal + cV;
+      localStorage.setItem('val', rez);
     }
-
-    
+  }
 }

@@ -1,9 +1,12 @@
-export class SimplCommand{
-    constructor(value){
-        this.value = value
-    }
+/* eslint-disable no-unused-vars */
+/* eslint-disable class-methods-use-this */
+/* eslint-disable import/prefer-default-export */
+export class SimplCommand {
+  constructor(value) {
+    this.value = value;
+  }
 
-    execute(currentValue){}
+  execute(currentValue) {}
 
-    undo(currentValue){}
+  undo(currentValue) {}
 }
