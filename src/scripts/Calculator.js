@@ -22,8 +22,8 @@ import { ClearMemory } from './Commands/ClearMemory';
 import { SubMemory } from './Commands/SubMemory';
 import { ReadMemory } from './Commands/ReadMemory';
 
-const previousOperandTextElement = document.querySelector('[data-previous-operand]');
-const currentOperandTextElement = document.querySelector('[data-current-operand]');
+const previousOperandTextElement = document.getElementById('data-previous-operand');
+const currentOperandTextElement = document.getElementById('data-current-operand');
 
 class Calculator {
   constructor(previousOperandTextElement, currentOperandTextElement) {
