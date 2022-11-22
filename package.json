@@ -19,7 +19,10 @@
   },
   "homepage": "https://github.com/iliakosko/calculatir#readme",
   "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
     "@babel/plugin-transform-modules-commonjs": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
     "clean-webpack-plugin": "^4.0.0",
     "eslint": "^8.27.0",
     "eslint-config-airbnb": "^19.0.4",
