@@ -1,7 +1,9 @@
 /* eslint-disable import/prefer-default-export */
-import { SimplCommand } from './SimplCommand';
+export class AddCommand {
+  constructor(value) {
+    this.value = value;
+  }
 
-export class AddCommand extends SimplCommand {
   execute(currentValue) {
     this.value = currentValue + this.value;
     return this.value;
